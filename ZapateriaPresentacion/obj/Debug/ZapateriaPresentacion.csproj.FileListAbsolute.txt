@@ -1,0 +1,12 @@
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\bin\Debug\ZapateriaPresentacion.exe.config
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\bin\Debug\ZapateriaPresentacion.exe
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\bin\Debug\ZapateriaPresentacion.pdb
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\bin\Debug\Newtonsoft.Json.dll
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\bin\Debug\Newtonsoft.Json.xml
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.frmZapateria.resources
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.Properties.Resources.resources
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.csproj.GenerateResource.cache
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.csproj.CoreCompileInputs.cache
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.csproj.CopyComplete
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.exe
+C:\Ejercicios\Zapateria\ZapateriaPresentacion\obj\Debug\ZapateriaPresentacion.pdb
