@@ -35,7 +35,6 @@ namespace ZapateriaAPI
             services.AddScoped<IStoreRepository, StoreRepository>();
             services.AddScoped<IArticlesService, ArticlesService>();
             services.AddScoped<IArticlesRepository, ArticlesRepository>();
-
             var provider = services.BuildServiceProvider(new ServiceProviderOptions
             {
                 // Prefer to keep validation on at all times
