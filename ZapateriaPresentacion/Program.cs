@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Splat;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ZapateriaPresentacion.Services.Implement;
+using ZapateriaPresentacion.Services.Interface;
 
 namespace ZapateriaPresentacion
 {
@@ -16,7 +19,8 @@ namespace ZapateriaPresentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmZapateria());
+            Locator.CurrentMutable.Register(() => new StoreService(), typeof(IStoreService));
+            Application.Run(new frmFrontEnd());
         }
     }
 }

@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{30277552-0CAE-4AE7-979B-8BEA6B1084ED}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ZapateriaPresentacion</RootNamespace>
+    <RootNamespace>ZapateriaPresentation</RootNamespace>
     <AssemblyName>ZapateriaPresentacion</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -35,6 +35,10 @@
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\ZapateriaAPI\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Splat, Version=14.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\ZapateriaAPI\packages\Splat.14.6.37\lib\netstandard2.0\Splat.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,18 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Client\Client.cs" />
+    <Compile Include="frmFrontEnd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmFrontEnd.Designer.cs">
+      <DependentUpon>frmFrontEnd.cs</DependentUpon>
     </Compile>
-    <Compile Include="Models\Request\Articulos.cs" />
-    <Compile Include="Models\Request\Tienda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Services\Implement\ArticleService.cs" />
+    <Compile Include="Services\Implement\StoreService.cs" />
+    <Compile Include="Services\Interface\IArticleService.cs" />
+    <Compile Include="Services\Interface\IStoreService.cs" />
+    <EmbeddedResource Include="frmFrontEnd.resx">
+      <DependentUpon>frmFrontEnd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +78,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -85,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ZapateriaCommon\ZapateriaCommon.csproj">
+      <Project>{0f655c02-c3d6-4039-b0e0-db3982f9aead}</Project>
+      <Name>ZapateriaCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
