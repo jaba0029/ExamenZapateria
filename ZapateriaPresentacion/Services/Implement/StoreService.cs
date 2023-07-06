@@ -13,7 +13,7 @@ namespace ZapateriaPresentacion.Services.Implement
     {
         public Task<IList<Store>> SaveStore(Store objStore)
         {
-            var result = Client.Client.Instance.PostAsync<List<Store>>(objStore,$"api/Stores");
+            var result = Client.Client.Instance.PostAsync<List<Store>>(objStore,$"v1/api/Stores");
             return Task.FromResult<IList<Store>>(result);
         }
 

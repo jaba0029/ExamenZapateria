@@ -20,7 +20,7 @@ namespace ZapateriaPresentacion
     public partial class frmFrontEnd : Form
     {
         private IStoreService _StoreService = Locator.Current.GetService<IStoreService>();
-        private IArticleService _ArticleService = Locator.Current.GetService<IArticleService>();
+        private IArticlesService _ArticleService = Locator.Current.GetService<IArticlesService>();
         public frmFrontEnd()
         {
             InitializeComponent();
@@ -35,12 +35,12 @@ namespace ZapateriaPresentacion
         {
             if (textNameStore.Text.Trim().Length<=0)
             {
-                MessageBox.Show("Super Zapatos", "Please, to give a store name!");
+                MessageBox.Show("Please, to give a store name!", "Super Zapatos");
                 return;
             }
             if (textAddressStore.Text.Trim().Length <= 0)
             {
-                MessageBox.Show("Super Zapatos", "Please, to give a store address!");
+                MessageBox.Show("Please, to give a store address!", "Super Zapatos");
                 return;
             }
             Store objStore = new Store()
@@ -63,12 +63,12 @@ namespace ZapateriaPresentacion
         {
             if (textNameArticle.Text.Trim().Length <= 0)
             {
-                MessageBox.Show("Super Zapatos", "Please, to give a article name!");
+                MessageBox.Show("Please, to give a article name!", "Super Zapatos");
                 return;
             }
             if (textDescriptionArticle.Text.Trim().Length <= 0)
             {
-                MessageBox.Show("Super Zapatos", "Please, to give a article description!");
+                MessageBox.Show( "Please, to give a article description!", "Super Zapatos");
                 return;
             }
 
@@ -79,7 +79,7 @@ namespace ZapateriaPresentacion
                 Price = decimal.Parse(textPriceArticle.Text),
                 TotalShelf = int.Parse(textArticleTotalInShelf.Text),
                 TotalVault = int.Parse(textArticleTotalInVault.Text),
-                StoreId_Id = int.Parse(textStored_Id.Text)
+                StoreId = int.Parse(textStore_Id.Text)
             };
 
             await _ArticleService.SaveArticle(objArticulo);
@@ -93,13 +93,17 @@ namespace ZapateriaPresentacion
 
         private async void buttonListArticlesByStore_Click(object sender, EventArgs e)
         {
-            if (textSrored_IdChoose.Text.Length <= 0)
+            if (textStore_IdChoose.Text.Length <= 0)
             {
-                MessageBox.Show("Super Zapatos","Please, to give a store number!");
+                MessageBox.Show("Please, to give a store number!", "Super Zapatos");
             }
             else
             {
-                await _ArticleService.GetArticlexId(int.Parse(textSrored_IdChoose.Text));
+                //await _ArticleService.GetArticlexId(int.Parse(textStore_IdChoose.Text)); 
+                IList<Articles> lista = await _ArticleService.GetArticle();
+                lista = lista.Where(x => x.StoreId == int.Parse(textStore_IdChoose.Text)).ToList();
+                dataGridListArticles.DataSource = lista;
+
             }
         }
         

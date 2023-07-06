@@ -37,12 +37,12 @@
             this.labelAddressStore = new System.Windows.Forms.Label();
             this.labelNameStore = new System.Windows.Forms.Label();
             this.groupBoxArticles = new System.Windows.Forms.GroupBox();
-            this.textSrored_IdChoose = new System.Windows.Forms.TextBox();
+            this.textStore_IdChoose = new System.Windows.Forms.TextBox();
             this.labelStored_Id = new System.Windows.Forms.Label();
             this.buttonAddArticles = new System.Windows.Forms.Button();
             this.buttonListArticles = new System.Windows.Forms.Button();
             this.buttonListArticlesByStore = new System.Windows.Forms.Button();
-            this.textStored_Id = new System.Windows.Forms.TextBox();
+            this.textStore_Id = new System.Windows.Forms.TextBox();
             this.textArticleTotalInVault = new System.Windows.Forms.TextBox();
             this.textArticleTotalInShelf = new System.Windows.Forms.TextBox();
             this.textPriceArticle = new System.Windows.Forms.TextBox();
@@ -141,12 +141,12 @@
             // 
             // groupBoxArticles
             // 
-            this.groupBoxArticles.Controls.Add(this.textSrored_IdChoose);
+            this.groupBoxArticles.Controls.Add(this.textStore_IdChoose);
             this.groupBoxArticles.Controls.Add(this.labelStored_Id);
             this.groupBoxArticles.Controls.Add(this.buttonAddArticles);
             this.groupBoxArticles.Controls.Add(this.buttonListArticles);
             this.groupBoxArticles.Controls.Add(this.buttonListArticlesByStore);
-            this.groupBoxArticles.Controls.Add(this.textStored_Id);
+            this.groupBoxArticles.Controls.Add(this.textStore_Id);
             this.groupBoxArticles.Controls.Add(this.textArticleTotalInVault);
             this.groupBoxArticles.Controls.Add(this.textArticleTotalInShelf);
             this.groupBoxArticles.Controls.Add(this.textPriceArticle);
@@ -166,13 +166,13 @@
             this.groupBoxArticles.TabStop = false;
             this.groupBoxArticles.Text = "Articulos";
             // 
-            // textSrored_IdChoose
+            // textStore_IdChoose
             // 
-            this.textSrored_IdChoose.Location = new System.Drawing.Point(420, 235);
-            this.textSrored_IdChoose.MaxLength = 10;
-            this.textSrored_IdChoose.Name = "textSrored_IdChoose";
-            this.textSrored_IdChoose.Size = new System.Drawing.Size(66, 20);
-            this.textSrored_IdChoose.TabIndex = 17;
+            this.textStore_IdChoose.Location = new System.Drawing.Point(420, 235);
+            this.textStore_IdChoose.MaxLength = 10;
+            this.textStore_IdChoose.Name = "textStore_IdChoose";
+            this.textStore_IdChoose.Size = new System.Drawing.Size(66, 20);
+            this.textStore_IdChoose.TabIndex = 17;
             // 
             // labelStored_Id
             // 
@@ -213,13 +213,13 @@
             this.buttonListArticlesByStore.UseVisualStyleBackColor = true;
             this.buttonListArticlesByStore.Click += new System.EventHandler(this.buttonListArticlesByStore_Click);
             // 
-            // textStored_Id
+            // textStore_Id
             // 
-            this.textStored_Id.Location = new System.Drawing.Point(143, 177);
-            this.textStored_Id.MaxLength = 10;
-            this.textStored_Id.Name = "textStored_Id";
-            this.textStored_Id.Size = new System.Drawing.Size(68, 20);
-            this.textStored_Id.TabIndex = 12;
+            this.textStore_Id.Location = new System.Drawing.Point(143, 177);
+            this.textStore_Id.MaxLength = 10;
+            this.textStore_Id.Name = "textStore_Id";
+            this.textStore_Id.Size = new System.Drawing.Size(68, 20);
+            this.textStore_Id.TabIndex = 12;
             // 
             // textArticleTotalInVault
             // 
@@ -366,13 +366,13 @@
         private System.Windows.Forms.Button buttonAddArticles;
         private System.Windows.Forms.Button buttonListArticles;
         private System.Windows.Forms.Button buttonListArticlesByStore;
-        private System.Windows.Forms.TextBox textStored_Id;
+        private System.Windows.Forms.TextBox textStore_Id;
         private System.Windows.Forms.TextBox textArticleTotalInVault;
         private System.Windows.Forms.TextBox textArticleTotalInShelf;
         private System.Windows.Forms.TextBox textPriceArticle;
         private System.Windows.Forms.TextBox textDescriptionArticle;
         private System.Windows.Forms.TextBox textNameArticle;
-        private System.Windows.Forms.TextBox textSrored_IdChoose;
+        private System.Windows.Forms.TextBox textStore_IdChoose;
         private System.Windows.Forms.Label labelStored_Id;
     }
 }

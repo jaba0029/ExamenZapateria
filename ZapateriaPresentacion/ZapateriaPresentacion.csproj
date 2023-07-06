@@ -63,9 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Implement\ArticleService.cs" />
+    <Compile Include="Services\Implement\ArticlesService.cs" />
     <Compile Include="Services\Implement\StoreService.cs" />
-    <Compile Include="Services\Interface\IArticleService.cs" />
+    <Compile Include="Services\Interface\IArticlesService.cs" />
     <Compile Include="Services\Interface\IStoreService.cs" />
     <EmbeddedResource Include="frmFrontEnd.resx">
       <DependentUpon>frmFrontEnd.cs</DependentUpon>

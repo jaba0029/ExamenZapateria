@@ -10,7 +10,9 @@ using ZapateriaAPI.BussinessLayer.Services.Interfaces;
 
 namespace ZapateriaAPI.Controllers
 {
-    public class ArticlesController : ApiController
+    [RoutePrefix("v1")]
+
+    public class ArticlesController : BaseController
     {
         IArticlesService _articlesService;
         public ArticlesController(IArticlesService articlesService)
@@ -18,14 +20,13 @@ namespace ZapateriaAPI.Controllers
             _articlesService = articlesService;
         }
 
-        [Route("api/Articles")]
         [HttpGet]
         public async Task<IHttpActionResult> ListArticles()
         {
             return Ok(await _articlesService.ListArticles());
         }
 
-        [Route("api/Articles/{id}")]
+        //[Route("api/Articles/{id}")]
         [HttpGet]
         public async Task<IHttpActionResult> ListArticlesByStore(string id)
         {

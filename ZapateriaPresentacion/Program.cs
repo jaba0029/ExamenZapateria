@@ -20,6 +20,7 @@ namespace ZapateriaPresentacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Locator.CurrentMutable.Register(() => new StoreService(), typeof(IStoreService));
+            Locator.CurrentMutable.Register(() => new ArticlesService(), typeof(IArticlesService));
             Application.Run(new frmFrontEnd());
         }
     }

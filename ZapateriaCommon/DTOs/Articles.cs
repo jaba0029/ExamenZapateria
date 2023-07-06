@@ -14,7 +14,7 @@ namespace ZapateriaCommon.DTOs
         public decimal Price { get; set; }
         public int TotalShelf { get; set; }
         public int TotalVault { get; set; }
-        public int StoreId_Id { get; set; }
+        public int StoreId { get; set; }
 
     }
 }

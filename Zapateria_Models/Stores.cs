@@ -12,12 +12,14 @@ namespace Zapateria_Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public int StoreId { get; set; }
 
         [MaxLength(100)]
         public string Name { get; set; }
 
         [MaxLength(100)]
         public string Address { get; set; }
+
+        public ICollection<Articles> Articles { get; set; }
     }
 }

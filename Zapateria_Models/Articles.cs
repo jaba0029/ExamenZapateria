@@ -21,7 +21,8 @@ namespace Zapateria_Models
         public decimal Price { get; set; }
         public int TotalShelf { get; set; }
         public int TotalVault { get; set; }
-        public Stores StoreId { get; set; }
+        public int StoreId { get; set; }
+        public Stores Store { get; set; }
 
     }
 }
